@@ -9,7 +9,7 @@ export const LEVELS = [
     "world": 1,
     "level": 1,
     "year": 1956,
-    "name": "Year One",
+    "name": "Allan is Born! 🎂",
     "terrain": [
       [
         2,
@@ -462,7 +462,7 @@ export const LEVELS = [
     "world": 1,
     "level": 2,
     "year": 1957,
-    "name": "The Adventures Begin",
+    "name": "First Steps & Toddler Adventures",
     "terrain": [
       [
         2,
@@ -915,7 +915,7 @@ export const LEVELS = [
     "world": 1,
     "level": 3,
     "year": 1958,
-    "name": "Learning the Ropes",
+    "name": "Trike Racer in Training",
     "terrain": [
       [
         2,
@@ -1368,7 +1368,7 @@ export const LEVELS = [
     "world": 1,
     "level": 4,
     "year": 1959,
-    "name": "Finding My Way",
+    "name": "Classic 50s Rock 'n' Roll",
     "terrain": [
       [
         2,
@@ -1821,7 +1821,7 @@ export const LEVELS = [
     "world": 1,
     "level": 5,
     "year": 1960,
-    "name": "The Big 4",
+    "name": "Starting Elementary School",
     "terrain": [
       [
         2,
@@ -2274,7 +2274,7 @@ export const LEVELS = [
     "world": 1,
     "level": 6,
     "year": 1961,
-    "name": "Grade School Days",
+    "name": "First Bicycle Speedster",
     "terrain": [
       [
         2,
@@ -2732,7 +2732,7 @@ export const LEVELS = [
     "world": 1,
     "level": 7,
     "year": 1962,
-    "name": "Making Friends",
+    "name": "60s Radio Classics",
     "terrain": [
       [
         2,
@@ -3190,7 +3190,7 @@ export const LEVELS = [
     "world": 1,
     "level": 8,
     "year": 1963,
-    "name": "Young & Wild",
+    "name": "Neighbourhood Street Hockey",
     "terrain": [
       [
         2,
@@ -3648,7 +3648,7 @@ export const LEVELS = [
     "world": 1,
     "level": 9,
     "year": 1964,
-    "name": "Hockey Season",
+    "name": "Gilligan's Island Premieres!",
     "terrain": [
       [
         2,
@@ -4106,7 +4106,7 @@ export const LEVELS = [
     "world": 1,
     "level": 10,
     "year": 1965,
-    "name": "First Goals",
+    "name": "King City Youth Days",
     "terrain": [
       [
         2,
@@ -4569,7 +4569,7 @@ export const LEVELS = [
     "world": 2,
     "level": 1,
     "year": 1966,
-    "name": "Growing Up Fast",
+    "name": "Star Trek: TOS Premieres!",
     "terrain": [
       [
         2,
@@ -5027,7 +5027,7 @@ export const LEVELS = [
     "world": 2,
     "level": 2,
     "year": 1967,
-    "name": "Teen Years",
+    "name": "Canada Centennial & Expo 67",
     "terrain": [
       [
         2,
@@ -5485,7 +5485,7 @@ export const LEVELS = [
     "world": 2,
     "level": 3,
     "year": 1968,
-    "name": "On the Ice",
+    "name": "Classic Rock & Big Dreams",
     "terrain": [
       [
         2,
@@ -5943,7 +5943,7 @@ export const LEVELS = [
     "world": 2,
     "level": 4,
     "year": 1969,
-    "name": "Man on the Moon",
+    "name": "Apollo 11: One Giant Leap!",
     "terrain": [
       [
         2,
@@ -6401,7 +6401,7 @@ export const LEVELS = [
     "world": 2,
     "level": 5,
     "year": 1970,
-    "name": "The Teenage Years",
+    "name": "King City Secondary School Begins!",
     "terrain": [
       [
         2,
@@ -6859,7 +6859,7 @@ export const LEVELS = [
     "world": 2,
     "level": 6,
     "year": 1971,
-    "name": "Open Road Ahead",
+    "name": "High School Garage Mechanics",
     "terrain": [
       [
         2,
@@ -7322,7 +7322,7 @@ export const LEVELS = [
     "world": 2,
     "level": 7,
     "year": 1972,
-    "name": "Drive!",
+    "name": "Summit Series: Team Canada! 🏒",
     "terrain": [
       [
         2,
@@ -7785,7 +7785,7 @@ export const LEVELS = [
     "world": 2,
     "level": 8,
     "year": 1973,
-    "name": "Good Times",
+    "name": "Tuning Up First Engines",
     "terrain": [
       [
         2,
@@ -8248,7 +8248,7 @@ export const LEVELS = [
     "world": 2,
     "level": 9,
     "year": 1974,
-    "name": "The Cottage Calls",
+    "name": "King City Secondary Graduation!",
     "terrain": [
       [
         2,
@@ -8711,7 +8711,7 @@ export const LEVELS = [
     "world": 2,
     "level": 10,
     "year": 1975,
-    "name": "Lake Life",
+    "name": "Classic Motoring & The Open Road",
     "terrain": [
       [
         2,
@@ -9179,7 +9179,7 @@ export const LEVELS = [
     "world": 3,
     "level": 1,
     "year": 1976,
-    "name": "Out on the Water",
+    "name": "Joining CN Rail & George Brown Millwright Program!",
     "terrain": [
       [
         2,
@@ -9642,7 +9642,7 @@ export const LEVELS = [
     "world": 3,
     "level": 2,
     "year": 1977,
-    "name": "Star Wars!",
+    "name": "Star Wars Hits Theaters! ⭐",
     "terrain": [
       [
         2,
@@ -10105,7 +10105,7 @@ export const LEVELS = [
     "world": 3,
     "level": 3,
     "year": 1978,
-    "name": "Riding Free",
+    "name": "Mastering the Millwright Craft",
     "terrain": [
       [
         2,
@@ -10568,7 +10568,7 @@ export const LEVELS = [
     "world": 3,
     "level": 4,
     "year": 1979,
-    "name": "The Open Road",
+    "name": "George Brown Graduation & Amy Born (May 14)! ❤️",
     "terrain": [
       [
         2,
@@ -11031,7 +11031,7 @@ export const LEVELS = [
     "world": 3,
     "level": 5,
     "year": 1980,
-    "name": "New Decade",
+    "name": "Miracle on Ice & Cottage Weekends",
     "terrain": [
       [
         2,
@@ -11494,7 +11494,7 @@ export const LEVELS = [
     "world": 3,
     "level": 6,
     "year": 1981,
-    "name": "First Harley?",
+    "name": "Jennifer Born (June 27)! ❤️",
     "terrain": [
       [
         2,
@@ -11962,7 +11962,7 @@ export const LEVELS = [
     "world": 3,
     "level": 7,
     "year": 1982,
-    "name": "Throttle Up",
+    "name": "Rail Yard Heavy Machinery",
     "terrain": [
       [
         2,
@@ -12430,7 +12430,7 @@ export const LEVELS = [
     "world": 3,
     "level": 8,
     "year": 1983,
-    "name": "Return of the Jedi",
+    "name": "The A-Team Premieres!",
     "terrain": [
       [
         2,
@@ -12898,7 +12898,7 @@ export const LEVELS = [
     "world": 3,
     "level": 9,
     "year": 1984,
-    "name": "Full Throttle",
+    "name": "80s Rock & Long Highway Drives",
     "terrain": [
       [
         2,
@@ -13366,7 +13366,7 @@ export const LEVELS = [
     "world": 3,
     "level": 10,
     "year": 1985,
-    "name": "Making Moves",
+    "name": "Cottage Campfires & Lake Cruising",
     "terrain": [
       [
         2,
@@ -13839,7 +13839,7 @@ export const LEVELS = [
     "world": 4,
     "level": 1,
     "year": 1986,
-    "name": "A New Chapter",
+    "name": "Meeting Carrie Orr",
     "terrain": [
       [
         2,
@@ -14302,7 +14302,7 @@ export const LEVELS = [
     "world": 4,
     "level": 2,
     "year": 1987,
-    "name": "Married Carrie ❤️",
+    "name": "Oct 24: Married Carrie Orr ❤️",
     "terrain": [
       [
         2,
@@ -14765,7 +14765,7 @@ export const LEVELS = [
     "world": 4,
     "level": 3,
     "year": 1988,
-    "name": "Amy Arrives 🎀",
+    "name": "Amy's Early Steps & Family Joy",
     "terrain": [
       [
         2,
@@ -15228,7 +15228,7 @@ export const LEVELS = [
     "world": 4,
     "level": 4,
     "year": 1989,
-    "name": "Family Man",
+    "name": "Cody Born (May 6)! 🎉",
     "terrain": [
       [
         2,
@@ -15691,7 +15691,7 @@ export const LEVELS = [
     "world": 4,
     "level": 5,
     "year": 1990,
-    "name": "The ’90s Begin",
+    "name": "Rising Up the Ranks at CN Rail",
     "terrain": [
       [
         2,
@@ -16154,7 +16154,7 @@ export const LEVELS = [
     "world": 4,
     "level": 6,
     "year": 1991,
-    "name": "Jenn Arrives 🎀",
+    "name": "Kelsey Born (April 23)! ❤️",
     "terrain": [
       [
         2,
@@ -16622,7 +16622,7 @@ export const LEVELS = [
     "world": 4,
     "level": 7,
     "year": 1992,
-    "name": "Full House",
+    "name": "Four Wonderful Kids at Home",
     "terrain": [
       [
         2,
@@ -17090,7 +17090,7 @@ export const LEVELS = [
     "world": 4,
     "level": 8,
     "year": 1993,
-    "name": "Cody Arrives 🎉",
+    "name": "Backyard Rinks & Hockey Drills",
     "terrain": [
       [
         2,
@@ -17558,7 +17558,7 @@ export const LEVELS = [
     "world": 4,
     "level": 9,
     "year": 1994,
-    "name": "Four-Time Champion",
+    "name": "Summer Lake Days at the Cottage",
     "terrain": [
       [
         2,
@@ -18026,7 +18026,7 @@ export const LEVELS = [
     "world": 4,
     "level": 10,
     "year": 1995,
-    "name": "The Crew Is Complete",
+    "name": "Family Road Trips Across Ontario",
     "terrain": [
       [
         2,
@@ -18499,7 +18499,7 @@ export const LEVELS = [
     "world": 5,
     "level": 1,
     "year": 1996,
-    "name": "Kelsey Arrives 🎀",
+    "name": "Promoted to System Manager, Intermodal (CN Rail)! 🚂",
     "terrain": [
       [
         2,
@@ -18967,7 +18967,7 @@ export const LEVELS = [
     "world": 5,
     "level": 2,
     "year": 1997,
-    "name": "Weekend Warrior",
+    "name": "Building the Cottage Dock & Boating",
     "terrain": [
       [
         2,
@@ -19435,7 +19435,7 @@ export const LEVELS = [
     "world": 5,
     "level": 3,
     "year": 1998,
-    "name": "Cottage Country",
+    "name": "Intermodal Logistics Across North America",
     "terrain": [
       [
         2,
@@ -19903,7 +19903,7 @@ export const LEVELS = [
     "world": 5,
     "level": 4,
     "year": 1999,
-    "name": "Y2K? No Problem",
+    "name": "Surviving Y2K Prep & Century Turn",
     "terrain": [
       [
         2,
@@ -20371,7 +20371,7 @@ export const LEVELS = [
     "world": 5,
     "level": 5,
     "year": 2000,
-    "name": "New Millennium",
+    "name": "Millennium Family Celebrations",
     "terrain": [
       [
         2,
@@ -20839,7 +20839,7 @@ export const LEVELS = [
     "world": 5,
     "level": 6,
     "year": 2001,
-    "name": "Die Hard Fan",
+    "name": "Classic Rock Radio & Workshop Projects",
     "terrain": [
       [
         2,
@@ -21312,7 +21312,7 @@ export const LEVELS = [
     "world": 5,
     "level": 7,
     "year": 2002,
-    "name": "Back on the Ice",
+    "name": "26+ Years of Dedicated Service at CN Rail",
     "terrain": [
       [
         2,
@@ -21785,7 +21785,7 @@ export const LEVELS = [
     "world": 5,
     "level": 8,
     "year": 2003,
-    "name": "Weekend Rides",
+    "name": "Joining Reefer Sales & NCIS Premieres!",
     "terrain": [
       [
         2,
@@ -22258,7 +22258,7 @@ export const LEVELS = [
     "world": 5,
     "level": 9,
     "year": 2004,
-    "name": "Open Water",
+    "name": "Starry Nights by the Lake",
     "terrain": [
       [
         2,
@@ -22731,7 +22731,7 @@ export const LEVELS = [
     "world": 5,
     "level": 10,
     "year": 2005,
-    "name": "Half Century",
+    "name": "Half a Century of Legendary Adventures 🏆",
     "terrain": [
       [
         2,
@@ -23209,7 +23209,7 @@ export const LEVELS = [
     "world": 6,
     "level": 1,
     "year": 2006,
-    "name": "The Road Calls",
+    "name": "Motorcycle Cruising & The Open Highway 🏍️",
     "terrain": [
       [
         2,
@@ -23677,7 +23677,7 @@ export const LEVELS = [
     "world": 6,
     "level": 2,
     "year": 2007,
-    "name": "Star Trek Lives",
+    "name": "Keeping Reefer Fleet Rolling",
     "terrain": [
       [
         2,
@@ -24145,7 +24145,7 @@ export const LEVELS = [
     "world": 6,
     "level": 3,
     "year": 2008,
-    "name": "Wind in the Hair",
+    "name": "Sunday TV Marathons & Big Family Dinners",
     "terrain": [
       [
         2,
@@ -24613,7 +24613,7 @@ export const LEVELS = [
     "world": 6,
     "level": 4,
     "year": 2009,
-    "name": "Fairway Days",
+    "name": "Garage Workshop Master Handyman",
     "terrain": [
       [
         2,
@@ -25081,7 +25081,7 @@ export const LEVELS = [
     "world": 6,
     "level": 5,
     "year": 2010,
-    "name": "Master of the Grill",
+    "name": "Team Canada Winter Olympics Hockey Gold! 🥇",
     "terrain": [
       [
         2,
@@ -25549,7 +25549,7 @@ export const LEVELS = [
     "world": 6,
     "level": 6,
     "year": 2011,
-    "name": "Hole in One?",
+    "name": "Joining TTX Company (Asst Manager NE USA & Canada)!",
     "terrain": [
       [
         2,
@@ -26022,7 +26022,7 @@ export const LEVELS = [
     "world": 6,
     "level": 7,
     "year": 2012,
-    "name": "Still Riding",
+    "name": "Railcar Pooling Logistics Leadership",
     "terrain": [
       [
         2,
@@ -26495,7 +26495,7 @@ export const LEVELS = [
     "world": 6,
     "level": 8,
     "year": 2013,
-    "name": "Captain of the Boat",
+    "name": "Proud Dad & Growing Family Milestones",
     "terrain": [
       [
         2,
@@ -26968,7 +26968,7 @@ export const LEVELS = [
     "world": 6,
     "level": 9,
     "year": 2014,
-    "name": "All Four Seasons",
+    "name": "Highway Adventures with Carrie",
     "terrain": [
       [
         2,
@@ -27441,7 +27441,7 @@ export const LEVELS = [
     "world": 6,
     "level": 10,
     "year": 2015,
-    "name": "Road Trip",
+    "name": "Promoted to TTX Regional Manager (Burlington, ON)! 🎯",
     "terrain": [
       [
         2,
@@ -27919,7 +27919,7 @@ export const LEVELS = [
     "world": 7,
     "level": 1,
     "year": 2016,
-    "name": "The Legend Era",
+    "name": "The 60 Milestone: Still Riding Strong 🏍️",
     "terrain": [
       [
         2,
@@ -28387,7 +28387,7 @@ export const LEVELS = [
     "world": 7,
     "level": 2,
     "year": 2017,
-    "name": "Grandpa Goals",
+    "name": "TTX Regional Fleet Excellence",
     "terrain": [
       [
         2,
@@ -28855,7 +28855,7 @@ export const LEVELS = [
     "world": 7,
     "level": 3,
     "year": 2018,
-    "name": "Still Got It",
+    "name": "Cottage Sunsets & Family Gatherings",
     "terrain": [
       [
         2,
@@ -29323,7 +29323,7 @@ export const LEVELS = [
     "world": 7,
     "level": 4,
     "year": 2019,
-    "name": "The Best Decade",
+    "name": "Well-Earned Retirement from TTX! 🎉",
     "terrain": [
       [
         2,
@@ -29791,7 +29791,7 @@ export const LEVELS = [
     "world": 7,
     "level": 5,
     "year": 2020,
-    "name": "Lock It Down",
+    "name": "Relaxing at Home & Keeping Family Close",
     "terrain": [
       [
         2,
@@ -30259,7 +30259,7 @@ export const LEVELS = [
     "world": 7,
     "level": 6,
     "year": 2021,
-    "name": "Back on the Water",
+    "name": "Workshop Time & Morning Coffees",
     "terrain": [
       [
         2,
@@ -30732,7 +30732,7 @@ export const LEVELS = [
     "world": 7,
     "level": 7,
     "year": 2022,
-    "name": "Throttle Wide Open",
+    "name": "Celebrating Life, Family & Good Times",
     "terrain": [
       [
         2,
@@ -31205,7 +31205,7 @@ export const LEVELS = [
     "world": 7,
     "level": 8,
     "year": 2023,
-    "name": "Par for the Course",
+    "name": "Cruising into Prime Retirement",
     "terrain": [
       [
         2,
@@ -31677,8 +31677,8 @@ export const LEVELS = [
   {
     "world": 7,
     "level": 9,
-    "year": 2024,
-    "name": "Legendary",
+    "year": 2025,
+    "name": "Counting Down to the Big Milestone",
     "terrain": [
       [
         2,
@@ -32151,7 +32151,7 @@ export const LEVELS = [
     "world": 7,
     "level": 10,
     "year": 2026,
-    "name": "THE LEGEND TURNS 70! 🎂",
+    "name": "Happy 70th Birthday, Allan! The Big 70! 🎂🎉",
     "terrain": [
       [
         2,
