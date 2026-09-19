@@ -10,8 +10,10 @@ export class TouchControls {
     this._joystickPointer = null;
     this._joystickStart = null;
     this._aimPointer = null;
-    // Edge-triggered flags: set on pointerdown, consumed once by getInput()
-    this._firePending = false;
+    // fire: level-triggered (true while finger holds fire button; PlayerTank throttles rate)
+    // mine: edge-triggered (one-shot; drop one mine per tap)
+    this._fireHeld = false;
+    this._firePointer = null;
     this._minePending = false;
     this._setupUI();
     this._setupListeners();
@@ -65,14 +67,15 @@ export class TouchControls {
   _onDown(ptr) {
     const W = this.scene.sys.game.config.width;
 
-    // Fire button
+    // Fire button — level-triggered: held state tracks the pointer
     if (this._dist(ptr, this._fireBtnPos) < this._fireBtnPos.r) {
-      this._firePending = true;  // consumed once by getInput()
+      this._fireHeld = true;
+      this._firePointer = ptr.id;
       return;
     }
-    // Mine button
+    // Mine button — edge-triggered: one mine per tap
     if (this._dist(ptr, this._mineBtnPos) < this._mineBtnPos.r) {
-      this._minePending = true;  // consumed once by getInput()
+      this._minePending = true;
       return;
     }
 
@@ -128,14 +131,18 @@ export class TouchControls {
     if (ptr.id === this._aimPointer) {
       this._aimPointer = null;
     }
-    // fire and mine are edge-triggered (pending flags), not cleared on pointerup
+    // Clear fire held state when the finger lifts off the fire button
+    if (ptr.id === this._firePointer) {
+      this._fireHeld = false;
+      this._firePointer = null;
+    }
   }
 
   getInput() {
-    // Deliver pending fire/mine as a one-shot pulse then clear the pending flag
-    this.input.fire = this._firePending;
+    // fire: level-triggered — returns true every frame while held (PlayerTank's fireRate throttles)
+    this.input.fire = this._fireHeld;
+    // mine: edge-triggered — one-shot pulse, consumed once then cleared
     this.input.mine = this._minePending;
-    this._firePending = false;
     this._minePending = false;
     return this.input;
   }

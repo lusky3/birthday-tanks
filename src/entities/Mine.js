@@ -33,14 +33,19 @@ export class Mine extends Phaser.GameObjects.Image {
   explode() {
     if (this.isDead) return;
     this.isDead = true;
-    this.scene.events.emit('audioPlay', 'explosion');
+    // Capture scene reference BEFORE destroy() — Phaser nulls this.scene after destroy
+    const scene = this.scene;
+    scene.events.emit('audioPlay', 'explosion');
     // Visual flash circle at explosion site
-    const expl = this.scene.add.graphics();
+    const expl = scene.add.graphics();
     expl.fillStyle(0xFF6600, 0.8);
     expl.fillCircle(this.x, this.y, this.radius);
-    this.scene.time.delayedCall(300, () => expl.destroy());
+    scene.time.delayedCall(300, () => expl.destroy());
     // Notify game scene so it can damage anything within radius
-    this.scene.events.emit('mineExploded', this.x, this.y, this.radius);
+    const ex = this.x;
+    const ey = this.y;
+    const er = this.radius;
     this.destroy();
+    scene.events.emit('mineExploded', ex, ey, er);
   }
 }

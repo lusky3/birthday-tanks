@@ -28,9 +28,9 @@ export class Game extends Phaser.Scene {
     // Register entity classes for use by entities
     this.registry.set('entityClasses', { Bullet, Mine });
 
-    // Active groups
-    this.activeBullets = this.add.group();
-    this.activeMines = this.add.group();
+    // Active groups — must be physics groups so collider/overlap callbacks fire
+    this.activeBullets = this.physics.add.group();
+    this.activeMines = this.physics.add.group();
     this.enemies = [];
     this._enemiesRemaining = 0;
 
@@ -125,6 +125,7 @@ export class Game extends Phaser.Scene {
     // Enemy bullets vs player
     this.physics.add.overlap(this.activeBullets, this.player, (bullet, player) => {
       if (bullet.owner === 'enemy' && !bullet.isDead && !player.isDead) {
+        bullet.isDead = true; // mark dead before destroy() to prevent double-hit
         bullet.destroy();
         player.loseLife();
       }

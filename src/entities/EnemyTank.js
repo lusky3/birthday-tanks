@@ -209,12 +209,14 @@ export class EnemyTank extends Phaser.GameObjects.Container {
   die() {
     if (this.isDead) return;
     this.isDead = true;
-    this.scene.events.emit('audioPlay', 'explosion');
+    // Capture scene reference BEFORE destroy() — Phaser nulls this.scene after destroy
+    const scene = this.scene;
+    scene.events.emit('audioPlay', 'explosion');
     // Simple explosion rings — no texture dependency
-    const g = this.scene.add.graphics();
+    const g = scene.add.graphics();
     g.lineStyle(3, 0xFF6600);
     g.strokeCircle(this.x, this.y, 10);
-    this.scene.tweens.add({
+    scene.tweens.add({
       targets: g,
       scaleX: 4, scaleY: 4,
       alpha: 0,
@@ -222,19 +224,17 @@ export class EnemyTank extends Phaser.GameObjects.Container {
       onComplete: () => g.destroy()
     });
     // Second ring
-    const g2 = this.scene.add.graphics();
+    const g2 = scene.add.graphics();
     g2.lineStyle(2, 0xFFFF00);
     g2.strokeCircle(this.x, this.y, 5);
-    this.scene.tweens.add({
+    scene.tweens.add({
       targets: g2,
       scaleX: 3, scaleY: 3,
       alpha: 0,
       duration: 250,
       onComplete: () => g2.destroy()
     });
-    // Save scene events ref before destroy() nulls it in some Phaser builds
-    const sceneEvents = this.scene.events;
     this.destroy();
-    sceneEvents.emit('enemyKilled');
+    scene.events.emit('enemyKilled');
   }
 }

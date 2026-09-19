@@ -97,6 +97,8 @@ export class PlayerTank extends Phaser.GameObjects.Container {
     if (mine && this.minesRemaining > 0) {
       this.minesRemaining--;
       this._dropMine();
+      // Notify HUD to update mine counter
+      this.scene.scene.get('HUD')?.events.emit('updateMines', this.minesRemaining);
     }
   }
 
