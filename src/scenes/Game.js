@@ -79,6 +79,18 @@ export class Game extends Phaser.Scene {
       if (audio) audio.play(type);
     });
 
+    // Start appropriate music
+    const audio = this.registry.get('audio');
+    if (audio) {
+      audio.stopAll();
+      const isBossLevel = (this.levelIndex + 1) % 10 === 0; // levels 10,20,...,70
+      if (isBossLevel) {
+        audio.startBossTheme();
+      } else {
+        audio.startBGM();
+      }
+    }
+
     // Collisions
     this._setupCollisions();
   }
@@ -151,10 +163,12 @@ export class Game extends Phaser.Scene {
     this._enemiesRemaining--;
     this.scene.get('HUD')?.events.emit('updateEnemies', this._enemiesRemaining);
     if (this._enemiesRemaining <= 0) {
-      this.time.delayedCall(800, () => {
-        const audio = this.registry.get('audio');
-        if (audio) audio.play('levelStart');
-        // Save progress before advancing so player can continue from this point
+      const audio = this.registry.get('audio');
+      if (audio) {
+        audio.stopAll();
+        audio.play('fanfare');
+      }
+      this.time.delayedCall(900, () => {
         localStorage.setItem('birthdayTanks_progress', JSON.stringify({
           levelIndex: this.levelIndex + 1,
           lives: this.player.lives
@@ -172,13 +186,14 @@ export class Game extends Phaser.Scene {
   _onPlayerDied(livesLeft) {
     this.scene.get('HUD')?.events.emit('updateLives', livesLeft);
     if (livesLeft <= 0) {
+      const audio = this.registry.get('audio');
+      if (audio) audio.stopAll();
       this.time.delayedCall(1000, () => {
         this.scene.stop('HUD');
         this.scene.stop('LevelCard');
         this.scene.start('GameOver', { levelIndex: this.levelIndex });
       });
     } else {
-      // Respawn at start position after short delay
       this.time.delayedCall(1500, () => {
         const ps = this.currentLevel.playerStart;
         const T = TerrainBuilder.TILE_SIZE;

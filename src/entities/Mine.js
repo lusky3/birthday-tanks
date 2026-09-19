@@ -24,6 +24,9 @@ export class Mine extends Phaser.GameObjects.Image {
       if (!this.isDead) {
         this.armed = true;
         this.setTint(0xFF4400);
+        // Start accelerating beep
+        const audio = scene.registry.get('audio');
+        if (audio) audio.startMineBeep();
       }
     });
     // Blink once armed to warn nearby tanks
@@ -33,8 +36,10 @@ export class Mine extends Phaser.GameObjects.Image {
   explode() {
     if (this.isDead) return;
     this.isDead = true;
-    // Capture scene reference BEFORE destroy() — Phaser nulls this.scene after destroy
     const scene = this.scene;
+    // Stop beeping
+    const audio = scene.registry.get('audio');
+    if (audio) audio.stopMineBeep();
     scene.events.emit('audioPlay', 'explosion');
     // Visual flash circle at explosion site
     const expl = scene.add.graphics();

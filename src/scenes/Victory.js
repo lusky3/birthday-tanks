@@ -76,6 +76,9 @@ export class Victory extends Phaser.Scene {
 
     // Play victory jingle
     const audio = this.registry.get('audio');
-    if (audio) audio.play('victory');
+    if (audio) {
+      audio.stopAll();
+      audio.play('victory');
+    }
   }
 }

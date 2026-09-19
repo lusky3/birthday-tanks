@@ -75,8 +75,16 @@ export class PlayerTank extends Phaser.GameObjects.Container {
       this.bodyAngle = Phaser.Math.RadToDeg(angle);
       this.bodySprite.setRotation(angle);
       this.scene.physics.velocityFromRotation(angle, this.speed, this.body.velocity);
+      // Engine hum — speed normalised 0–1
+      const audio = this.scene.registry.get('audio');
+      if (audio) {
+        const speedNorm = Math.sqrt(dx*dx + dy*dy); // 0–1 from joystick magnitude
+        audio.startEngine(speedNorm);
+      }
     } else {
       this.body.setVelocity(0, 0);
+      const audio = this.scene.registry.get('audio');
+      if (audio) audio.stopEngine();
     }
 
     // Turret aim
