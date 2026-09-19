@@ -210,17 +210,31 @@ export class EnemyTank extends Phaser.GameObjects.Container {
     if (this.isDead) return;
     this.isDead = true;
     this.scene.events.emit('audioPlay', 'explosion');
-    // Particle burst using an already-loaded texture as stand-in
-    const particles = this.scene.add.particles(this.x, this.y, 'enemy_golfball', {
-      speed: { min: 50, max: 150 },
-      scale: { start: 0.3, end: 0 },
-      lifespan: 500,
-      quantity: 8,
-      emitting: false
+    // Simple explosion rings — no texture dependency
+    const g = this.scene.add.graphics();
+    g.lineStyle(3, 0xFF6600);
+    g.strokeCircle(this.x, this.y, 10);
+    this.scene.tweens.add({
+      targets: g,
+      scaleX: 4, scaleY: 4,
+      alpha: 0,
+      duration: 400,
+      onComplete: () => g.destroy()
     });
-    particles.explode(8);
-    this.scene.time.delayedCall(600, () => particles.destroy());
+    // Second ring
+    const g2 = this.scene.add.graphics();
+    g2.lineStyle(2, 0xFFFF00);
+    g2.strokeCircle(this.x, this.y, 5);
+    this.scene.tweens.add({
+      targets: g2,
+      scaleX: 3, scaleY: 3,
+      alpha: 0,
+      duration: 250,
+      onComplete: () => g2.destroy()
+    });
+    // Save scene events ref before destroy() nulls it in some Phaser builds
+    const sceneEvents = this.scene.events;
     this.destroy();
-    this.scene.events.emit('enemyKilled');
+    sceneEvents.emit('enemyKilled');
   }
 }

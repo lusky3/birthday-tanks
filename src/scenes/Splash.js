@@ -88,11 +88,25 @@ export class Splash extends Phaser.Scene {
       fontStyle: 'bold',
       backgroundColor: '#FF4444',
       padding: { x: 20, y: 12 },
-    }).setOrigin(0.5);
+    }).setOrigin(0.5).setInteractive({ useHandCursor: true });
     this.tweens.add({ targets: tapBtn, alpha: 0.4, duration: 700, yoyo: true, repeat: -1 });
 
-    // Start on tap
-    this.input.once('pointerdown', () => {
+    // Continue button — shown if saved progress exists
+    const saved = JSON.parse(localStorage.getItem('birthdayTanks_progress') || 'null');
+    if (saved && saved.levelIndex > 0) {
+      const continueBtn = this.add.text(W/2, H * 0.93, `▶ Continue (Level ${saved.levelIndex + 1}/70)`, {
+        fontSize: '16px', color: '#AAFFAA', fontFamily: 'Arial',
+        backgroundColor: '#003300', padding: { x: 16, y: 10 }
+      }).setOrigin(0.5).setInteractive({ useHandCursor: true });
+      continueBtn.on('pointerdown', () => {
+        const audio = this.registry.get('audio');
+        audio.unlock();
+        this.scene.start('Game', { levelIndex: saved.levelIndex, lives: saved.lives });
+      });
+    }
+
+    // TAP TO PLAY — scoped to button only so Continue tap doesn't also start from level 0
+    tapBtn.on('pointerdown', () => {
       const audio = this.registry.get('audio');
       audio.unlock();
       audio.play('levelStart');

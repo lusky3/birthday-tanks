@@ -31,6 +31,13 @@ const config = {
 
 const game = new Phaser.Game(config);
 
-// Prevent scrolling on mobile
-document.body.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+// Prevent iOS scroll bounce and double-tap zoom
+document.addEventListener('touchstart', e => e.preventDefault(), { passive: false });
+document.addEventListener('touchmove', e => e.preventDefault(), { passive: false });
+document.addEventListener('touchend', e => e.preventDefault(), { passive: false });
+
+// Apply touch-action: none to canvas
+game.canvas.style.touchAction = 'none';
+game.canvas.style.userSelect = 'none';
+
 window.addEventListener('resize', () => game.scale.refresh());

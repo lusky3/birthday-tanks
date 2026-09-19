@@ -56,6 +56,8 @@ export class Game extends Phaser.Scene {
       this.enemies.push(enemy);
       this._enemiesRemaining++;
     });
+    // Group used for overlap/collider registration (avoids re-registering on respawn)
+    this.enemyGroup = this.physics.add.group(this.enemies);
 
     // Touch controls
     this.controls = new TouchControls(this);
@@ -111,14 +113,13 @@ export class Game extends Phaser.Scene {
       if (bullet && !bullet.isDead && bullet.bounce) bullet.bounce();
     });
 
-    // Player bullets vs enemies
-    this.enemies.forEach(enemy => {
-      this.physics.add.overlap(this.activeBullets, enemy, (bullet, e) => {
-        if (bullet.owner === 'player' && !bullet.isDead) {
-          bullet.destroy();
-          e.hit();
-        }
-      });
+    // Player bullets vs enemies — group overlap avoids per-enemy registration
+    this.physics.add.overlap(this.activeBullets, this.enemyGroup, (bullet, enemy) => {
+      if (bullet.owner === 'player' && !bullet.isDead && !enemy.isDead) {
+        bullet.isDead = true;
+        bullet.destroy();
+        enemy.hit();
+      }
     });
 
     // Enemy bullets vs player
@@ -136,14 +137,12 @@ export class Game extends Phaser.Scene {
       });
     }
 
-    // Armed mine contacts with tanks — player first so callback receives (player, mine)
+    // Armed mine contacts with tanks
     this.physics.add.overlap(this.player, this.activeMines, (player, mine) => {
       if (mine.armed && !mine.isDead) mine.explode();
     });
-    this.enemies.forEach(enemy => {
-      this.physics.add.overlap(enemy, this.activeMines, (e, mine) => {
-        if (mine.armed && !mine.isDead) mine.explode();
-      });
+    this.physics.add.overlap(this.enemyGroup, this.activeMines, (enemy, mine) => {
+      if (mine.armed && !mine.isDead) mine.explode();
     });
   }
 
@@ -154,6 +153,11 @@ export class Game extends Phaser.Scene {
       this.time.delayedCall(800, () => {
         const audio = this.registry.get('audio');
         if (audio) audio.play('levelStart');
+        // Save progress before advancing so player can continue from this point
+        localStorage.setItem('birthdayTanks_progress', JSON.stringify({
+          levelIndex: this.levelIndex + 1,
+          lives: this.player.lives
+        }));
         this.scene.stop('HUD');
         this.scene.stop('LevelCard');
         this.scene.start('Game', {

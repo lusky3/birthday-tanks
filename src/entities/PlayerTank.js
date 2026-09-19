@@ -121,6 +121,15 @@ export class PlayerTank extends Phaser.GameObjects.Container {
     this.isDead = true;
     this.setVisible(false);
     this.body.setVelocity(0, 0);
+    // Red explosion ring at death position
+    const g = this.scene.add.graphics();
+    g.lineStyle(4, 0xFF0000);
+    g.strokeCircle(this.x, this.y, 10);
+    this.scene.tweens.add({
+      targets: g, scaleX: 5, scaleY: 5, alpha: 0,
+      duration: 600,
+      onComplete: () => g.destroy()
+    });
     this.scene.events.emit('audioPlay', 'explosion');
     this.scene.events.emit('playerDied', this.lives);
   }

@@ -5,6 +5,9 @@ export class Victory extends Phaser.Scene {
     const W = this.sys.game.config.width;
     const H = this.sys.game.config.height;
 
+    // Clear saved progress — player has beaten the game
+    localStorage.removeItem('birthdayTanks_progress');
+
     // Deep celebratory gradient
     const bg = this.add.graphics();
     bg.fillGradientStyle(0x001a00, 0x001a3e, 0x1a0028, 0x000000, 1);

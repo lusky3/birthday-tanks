@@ -1353,8 +1353,8 @@ export const LEVELS = [
     "enemies": [
       {
         "type": "candle",
-        "x": 5,
-        "y": 5
+        "x": 4,
+        "y": 4
       }
     ],
     "playerStart": {
@@ -5923,8 +5923,8 @@ export const LEVELS = [
     "enemies": [
       {
         "type": "candle",
-        "x": 5,
-        "y": 5
+        "x": 4,
+        "y": 4
       },
       {
         "type": "golfball",
@@ -6386,8 +6386,8 @@ export const LEVELS = [
       },
       {
         "type": "golfball",
-        "x": 2,
-        "y": 8
+        "x": 1,
+        "y": 7
       }
     ],
     "playerStart": {
@@ -10543,8 +10543,8 @@ export const LEVELS = [
     "enemies": [
       {
         "type": "golfball",
-        "x": 5,
-        "y": 5
+        "x": 4,
+        "y": 4
       },
       {
         "type": "puck",
@@ -11011,13 +11011,13 @@ export const LEVELS = [
       },
       {
         "type": "puck",
-        "x": 2,
-        "y": 8
+        "x": 1,
+        "y": 7
       },
       {
         "type": "golfball",
-        "x": 5,
-        "y": 8
+        "x": 4,
+        "y": 7
       }
     ],
     "playerStart": {
@@ -15203,8 +15203,8 @@ export const LEVELS = [
     "enemies": [
       {
         "type": "puck",
-        "x": 5,
-        "y": 5
+        "x": 4,
+        "y": 4
       },
       {
         "type": "boat",
@@ -15671,13 +15671,13 @@ export const LEVELS = [
       },
       {
         "type": "boat",
-        "x": 2,
-        "y": 8
+        "x": 1,
+        "y": 7
       },
       {
         "type": "puck",
-        "x": 5,
-        "y": 8
+        "x": 4,
+        "y": 7
       }
     ],
     "playerStart": {
@@ -19873,8 +19873,8 @@ export const LEVELS = [
     "enemies": [
       {
         "type": "snowmobile",
-        "x": 5,
-        "y": 5
+        "x": 4,
+        "y": 4
       },
       {
         "type": "puck",
@@ -20346,13 +20346,13 @@ export const LEVELS = [
       },
       {
         "type": "puck",
-        "x": 2,
-        "y": 8
+        "x": 1,
+        "y": 7
       },
       {
         "type": "snowmobile",
-        "x": 5,
-        "y": 8
+        "x": 4,
+        "y": 7
       },
       {
         "type": "puck",
@@ -24583,8 +24583,8 @@ export const LEVELS = [
     "enemies": [
       {
         "type": "biker",
-        "x": 5,
-        "y": 5
+        "x": 4,
+        "y": 4
       },
       {
         "type": "snowmobile",
@@ -25056,13 +25056,13 @@ export const LEVELS = [
       },
       {
         "type": "snowmobile",
-        "x": 2,
-        "y": 8
+        "x": 1,
+        "y": 7
       },
       {
         "type": "biker",
-        "x": 5,
-        "y": 8
+        "x": 4,
+        "y": 7
       },
       {
         "type": "snowmobile",
@@ -29293,8 +29293,8 @@ export const LEVELS = [
     "enemies": [
       {
         "type": "candle",
-        "x": 5,
-        "y": 5
+        "x": 4,
+        "y": 4
       },
       {
         "type": "golfball",
@@ -29766,13 +29766,13 @@ export const LEVELS = [
       },
       {
         "type": "golfball",
-        "x": 2,
-        "y": 8
+        "x": 1,
+        "y": 7
       },
       {
         "type": "puck",
-        "x": 5,
-        "y": 8
+        "x": 4,
+        "y": 7
       },
       {
         "type": "boat",
